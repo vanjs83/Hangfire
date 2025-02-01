@@ -1,0 +1,17 @@
+C:\Hangfire\Infrastrucute\bin\Debug\net8.0\Infrastrucute.deps.json
+C:\Hangfire\Infrastrucute\bin\Debug\net8.0\Infrastrucute.dll
+C:\Hangfire\Infrastrucute\bin\Debug\net8.0\Infrastrucute.pdb
+C:\Hangfire\Infrastrucute\bin\Debug\net8.0\Application.dll
+C:\Hangfire\Infrastrucute\bin\Debug\net8.0\Domain.dll
+C:\Hangfire\Infrastrucute\bin\Debug\net8.0\Application.pdb
+C:\Hangfire\Infrastrucute\bin\Debug\net8.0\Domain.pdb
+C:\Hangfire\Infrastrucute\obj\Debug\net8.0\Infrastrucute.csproj.AssemblyReference.cache
+C:\Hangfire\Infrastrucute\obj\Debug\net8.0\Infrastrucute.GeneratedMSBuildEditorConfig.editorconfig
+C:\Hangfire\Infrastrucute\obj\Debug\net8.0\Infrastrucute.AssemblyInfoInputs.cache
+C:\Hangfire\Infrastrucute\obj\Debug\net8.0\Infrastrucute.AssemblyInfo.cs
+C:\Hangfire\Infrastrucute\obj\Debug\net8.0\Infrastrucute.csproj.CoreCompileInputs.cache
+C:\Hangfire\Infrastrucute\obj\Debug\net8.0\Infrastr.1773E906.Up2Date
+C:\Hangfire\Infrastrucute\obj\Debug\net8.0\Infrastrucute.dll
+C:\Hangfire\Infrastrucute\obj\Debug\net8.0\refint\Infrastrucute.dll
+C:\Hangfire\Infrastrucute\obj\Debug\net8.0\Infrastrucute.pdb
+C:\Hangfire\Infrastrucute\obj\Debug\net8.0\ref\Infrastrucute.dll
