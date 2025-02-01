@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OZHYDOuw3iw=",
+  "dgSpecHash": "UUPpsblsqo8=",
   "success": true,
-  "projectFilePath": "C:\\Hangfire\\Infrastrucute\\Infrastrucute.csproj",
+  "projectFilePath": "C:\\Hangfire\\Infrastrucute\\Infrastructure.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

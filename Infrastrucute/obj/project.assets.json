@@ -52,9 +52,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Hangfire\\Infrastrucute\\Infrastrucute.csproj",
-      "projectName": "Infrastrucute",
-      "projectPath": "C:\\Hangfire\\Infrastrucute\\Infrastrucute.csproj",
+      "projectUniqueName": "C:\\Hangfire\\Infrastrucute\\Infrastructure.csproj",
+      "projectName": "Infrastructure",
+      "projectPath": "C:\\Hangfire\\Infrastrucute\\Infrastructure.csproj",
       "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
       "outputPath": "C:\\Hangfire\\Infrastrucute\\obj\\",
       "projectStyle": "PackageReference",

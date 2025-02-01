@@ -33,7 +33,7 @@
 
   <ItemGroup>
     <ProjectReference Include="Application\Application.csproj" />
-    <ProjectReference Include="Infrastrucute\Infrastrucute.csproj" />
+    <ProjectReference Include="Infrastrucute\Infrastructure.csproj" />
   </ItemGroup>
 
 

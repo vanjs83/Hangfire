@@ -1465,17 +1465,17 @@
           "bin/placeholder/Domain.dll": {}
         }
       },
-      "Infrastrucute/1.0.0": {
+      "Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Application": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Infrastrucute.dll": {}
+          "bin/placeholder/Infrastructure.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Infrastrucute.dll": {}
+          "bin/placeholder/Infrastructure.dll": {}
         }
       }
     }
@@ -4326,10 +4326,10 @@
       "path": "Domain/Domain.csproj",
       "msbuildProject": "Domain/Domain.csproj"
     },
-    "Infrastrucute/1.0.0": {
+    "Infrastructure/1.0.0": {
       "type": "project",
-      "path": "Infrastrucute/Infrastrucute.csproj",
-      "msbuildProject": "Infrastrucute/Infrastrucute.csproj"
+      "path": "Infrastrucute/Infrastructure.csproj",
+      "msbuildProject": "Infrastrucute/Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4338,7 +4338,7 @@
       "Hangfire.AspNetCore >= 1.8.17",
       "Hangfire.Dashboard.Authorization >= 3.1.0",
       "Hangfire.SqlServer >= 1.8.17",
-      "Infrastrucute >= 1.0.0",
+      "Infrastructure >= 1.0.0",
       "Microsoft.Data.SqlClient >= 5.2.2",
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 9.0.0",
       "Microsoft.Extensions.Logging.Log4Net.AspNetCore >= 8.0.0",
@@ -4386,8 +4386,8 @@
             "C:\\Hangfire\\Application\\Application.csproj": {
               "projectPath": "C:\\Hangfire\\Application\\Application.csproj"
             },
-            "C:\\Hangfire\\Infrastrucute\\Infrastrucute.csproj": {
-              "projectPath": "C:\\Hangfire\\Infrastrucute\\Infrastrucute.csproj"
+            "C:\\Hangfire\\Infrastrucute\\Infrastructure.csproj": {
+              "projectPath": "C:\\Hangfire\\Infrastrucute\\Infrastructure.csproj"
             }
           }
         }
