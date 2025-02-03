@@ -10,8 +10,8 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 git branch: 'main', 
-                    credentialsId: 'github-credentials-id', 
-                    url: 'https://github.com/your-username/your-dotnet-repo.git'
+                    credentialsId: 'e0d68cfe-9e94-4c29-b8d4-24c0eea9ab54', 
+                    url: 'https://github.com/vanjs83/your-dotnet-repo.git'
             }
         }
 
