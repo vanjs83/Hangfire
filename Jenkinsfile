@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        SERVICE_NAME = "MyWindowsService"   // Change to your service name
+        SERVICE_NAME = "HangfireService"   // Change to your service name
         DEPLOY_PATH = "C:\\Services\\HangfireService"  // Path where service runs
     }
 
