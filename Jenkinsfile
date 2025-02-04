@@ -35,7 +35,7 @@ pipeline {
 
         stage('Publish Windows Service') {
             steps {
-             echo   bat 'dotnet publish -c Release -o ${DEPLOY_PATH}'
+                bat 'dotnet publish -c Release -o ${DEPLOY_PATH}'
             }
         }
 
