@@ -55,8 +55,8 @@ pipeline {
                 script {
                     bat """
                     echo Deploying Windows Service...
-                   echo if not exist ${DEPLOY_PATH} mkdir ${DEPLOY_PATH}
-                  echo  xcopy /E /Y publish_output\\* ${DEPLOY_PATH}\\
+                    if not exist ${DEPLOY_PATH} mkdir ${DEPLOY_PATH}
+                    xcopy /E /Y publish_output\\* ${DEPLOY_PATH}\\
                     """
                 }
             }
