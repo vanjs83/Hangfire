@@ -1,4 +1,4 @@
-pipeline {
+hopipeline {
     agent any
 
     environment {
@@ -35,7 +35,7 @@ pipeline {
 
         stage('Publish Windows Service') {
             steps {
-                bat 'dotnet publish -c Release -o ${DEPLOY_PATH}'
+             echo   bat 'dotnet publish -c Release -o ${DEPLOY_PATH}'
             }
         }
 
@@ -44,7 +44,7 @@ pipeline {
                 script {
                     bat """
                     echo Stopping Windows Service...
-                    sc stop ${SERVICE_NAME} || echo Service not running
+                   echo sc stop ${SERVICE_NAME} || echo Service not running
                     """
                 }
             }
@@ -55,8 +55,8 @@ pipeline {
                 script {
                     bat """
                     echo Deploying Windows Service...
-                    if not exist ${DEPLOY_PATH} mkdir ${DEPLOY_PATH}
-                    xcopy /E /Y publish_output\\* ${DEPLOY_PATH}\\
+                   echo if not exist ${DEPLOY_PATH} mkdir ${DEPLOY_PATH}
+                  echo  xcopy /E /Y publish_output\\* ${DEPLOY_PATH}\\
                     """
                 }
             }
@@ -66,8 +66,8 @@ pipeline {
             steps {
                 script {
                     bat """
-                    echo Starting Windows Service...
-                    sc start ${SERVICE_NAME}
+                  echo  echo Starting Windows Service...
+                   echo sc start ${SERVICE_NAME}
                     """
                 }
             }
