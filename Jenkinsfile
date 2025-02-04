@@ -61,7 +61,25 @@ pipeline {
                 }
             }
         }
+        
+         stage('Install Windows Service') {
+            steps {
+                script {
+                    bat """
+                    echo Installing Windows Service...
+                    sc query ${SERVICE_NAME} >nul 2>&1
+                    if errorlevel 1 (
+                        echo Service does not exist. Installing service...
+                        sc create ${SERVICE_NAME} binPath= "${DEPLOY_PATH}\\HangfireService.exe" start= auto
+                    ) else (
+                        echo Service already installed.
+                    )
+                    """
+                }
+             }
+          }
 
+        
         stage('Start Windows Service') {
             steps {
                 script {
