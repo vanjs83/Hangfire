@@ -11,7 +11,7 @@ pipeline {
             steps {
                 git branch: 'main', 
                     credentialsId: '5220c52c-827d-48be-af22-39373106b6cd', 
-                    url: 'https://github.com/vanjs83/hangfire.git'
+                    url: 'https://github.com/vanjs83/Hangfire.git'
             }
         }
 
