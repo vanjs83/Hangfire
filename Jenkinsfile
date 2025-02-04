@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 git branch: 'main', 
-                    credentialsId: 'e0d68cfe-9e94-4c29-b8d4-24c0eea9ab54', 
+                    credentialsId: '5220c52c-827d-48be-af22-39373106b6cd', 
                     url: 'https://github.com/vanjs83/your-dotnet-repo.git'
             }
         }
