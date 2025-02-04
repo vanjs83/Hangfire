@@ -67,7 +67,7 @@ pipeline {
                 script {
                     bat """
                   echo  echo Starting Windows Service...
-                   echo sc start ${SERVICE_NAME}
+                   sc start ${SERVICE_NAME}
                     """
                 }
             }
