@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
     environment {
         SERVICE_NAME = "HangfireService"   // Change to your service name
         DEPLOY_PATH = "C:\\Services\\Hangfire"  // Path where service runs
