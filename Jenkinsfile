@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         SERVICE_NAME = "HangfireService"   // Change to your service name
-        DEPLOY_PATH = "C:\\Services\\HangfireService"  // Path where service runs
+        DEPLOY_PATH = "C:\\Services\\Hangfire"  // Path where service runs
     }
 
     stages {
@@ -70,7 +70,7 @@ pipeline {
                     sc query ${SERVICE_NAME} >nul 2>&1
                     if errorlevel 1 (
                         echo Service does not exist. Installing service...
-                        sc create ${SERVICE_NAME} binPath= "${DEPLOY_PATH}\Hangfire.exe" start= auto
+                        sc create ${SERVICE_NAME} binPath= "${DEPLOY_PATH}\\Hangfire.exe" start= auto
                     ) else (
                         echo Service already installed.
                     )
