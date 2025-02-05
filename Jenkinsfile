@@ -85,7 +85,7 @@ pipeline {
                 script {
                     bat """
                   echo Starting Windows Service...
-                   sc start ${SERVICE_NAME} binPath= "${DEPLOY_PATH}\\Hangfire.exe" start= auto
+                   sc start ${SERVICE_NAME}
                     """
                 }
             }
