@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Hosting;
+using System;
 using Topshelf;
 
 namespace Hangfire
@@ -21,6 +22,11 @@ namespace Hangfire
                 x.SetServiceName("HangfireService");
                 x.SetDisplayName("Hangfire Service");
                 x.SetDescription("A Hangfire-based Windows Service managed by Topshelf.");
+
+                // Increase timeout to 60 seconds
+                x.StartAutomatically();
+                x.EnablePauseAndContinue();
+                x.SetStartTimeout(TimeSpan.FromMinutes(2)); // Adjust timeout as needed
             });
 
         }

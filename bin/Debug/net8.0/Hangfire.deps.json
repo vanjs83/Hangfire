@@ -12,7 +12,7 @@
           "Hangfire.AspNetCore": "1.8.17",
           "Hangfire.Dashboard.Authorization": "3.1.0",
           "Hangfire.SqlServer": "1.8.17",
-          "Infrastrucute": "1.0.0",
+          "Infrastructure": "1.0.0",
           "Microsoft.Data.SqlClient": "5.2.2",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0",
           "Microsoft.Extensions.Logging.Log4Net.AspNetCore": "8.0.0",
@@ -888,12 +888,12 @@
           }
         }
       },
-      "Infrastrucute/1.0.0": {
+      "Infrastructure/1.0.0": {
         "dependencies": {
           "Application": "1.0.0"
         },
         "runtime": {
-          "Infrastrucute.dll": {
+          "Infrastructure.dll": {
             "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1484,7 +1484,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Infrastrucute/1.0.0": {
+    "Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
