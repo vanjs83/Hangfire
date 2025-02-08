@@ -1,5 +1,67 @@
 .vs
-# Ignore build artifacts
+# Build Folders (Output)
 bin/
 obj/
+out/
+
+# Rider / JetBrains
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# Log files
+*.log
+logs/
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+packages/
+project.lock.json
+project.assets.json
+
+# .NET Core & .NET 5+ Artifacts
+*.dll
+*.exe
+*.pdb
+*.db
+*.bak
+*.cache
+*.pidb
+*.ilk
+*.obj
+*.iobj
+*.ipdb
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+*.sln.DotSettings
+
+# Entity Framework Migrations
+Migrations/
+
+# Secrets & Configurations
+appsettings.json
+appsettings.*.json
+secrets.json
+
+# Publish Artifacts
+publish/
+wwwroot/
+
+# Compression files
+*.zip
+*.tar.gz
+*.7z
+*.rar
+
+# IDE Crash Reports
+hs_err_pid*
+
 

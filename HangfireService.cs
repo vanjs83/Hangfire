@@ -51,9 +51,10 @@ namespace Hangfire
 
             Task.Run(() => host.RunAsync(cts.Token)); // Run asynchronously
             Console.WriteLine("Hangfire Server started. Press any key to exit...");
-           // Console.ReadKey();
+           // Console.ReadKey();hj
             return true;
-        }
+
+        }  
 
         public bool Stop()
         {
