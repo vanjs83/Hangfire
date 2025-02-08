@@ -24,7 +24,7 @@ namespace Hangfire
         public void WriteMessage()
         {
             _logger.LogInformation($"Recurring job executed: {DateTime.Now}");
-            _logger.LogInformation("Method: WriteMessage");
+            _logger.LogInformation("Method: WriteMessage ");
         }
     }
 }
