@@ -48,7 +48,7 @@ namespace Hangfire
 
             host.Run();
             Console.WriteLine("Hangfire Server started. Press any key to exit...");
-            Console.ReadKey();
+           // Console.ReadKey();
             return true;
         }
 
