@@ -6,12 +6,15 @@ using Microsoft.Extensions.Logging;
 using log4net;
 using log4net.Config;
 using System.IO;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace Hangfire
 {
     public class HangfireService
     {
         private IHost host;
+        private readonly CancellationTokenSource cts = new();
         public bool Start()
         {
             Console.WriteLine("Start console app!");
@@ -46,7 +49,7 @@ namespace Hangfire
 
 
 
-            host.Run();
+            Task.Run(() => host.RunAsync(cts.Token)); // Run asynchronously
             Console.WriteLine("Hangfire Server started. Press any key to exit...");
            // Console.ReadKey();
             return true;
@@ -54,6 +57,7 @@ namespace Hangfire
 
         public bool Stop()
         {
+            cts.Cancel();
             host?.Dispose();
             Console.WriteLine("Hangfire Service stopped.");
             return true;
