@@ -14,6 +14,16 @@ pipeline {
             }
         }
 
+        stage('Get Git Tag') {
+            steps {
+                script {
+                    def gitTag = sh(script: "git describe --tags --abbrev=0", returnStdout: true).trim()
+                    echo "Latest Git Tag: ${gitTag}"
+                    env.GIT_TAG = gitTag  // Store the tag in an environment variable
+                }
+            }
+        }
+
         stage('Restore Dependencies') {
             steps {
                 bat 'dotnet restore'
