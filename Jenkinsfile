@@ -19,7 +19,8 @@ pipeline {
             steps {
                 script {
                     def commitSha = sh(script: "git rev-parse --short=7 HEAD", returnStdout: true).trim()
-                    env.COMMIT_SHA = commitSha  // Store in environment variable
+                    echo "${commitSha}" 
+                    env.COMMIT_SHA = commitSha 
                     echo "✅ COMMIT_SHA: ${env.COMMIT_SHA}"
 
                 }
