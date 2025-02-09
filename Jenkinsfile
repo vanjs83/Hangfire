@@ -14,12 +14,11 @@ pipeline {
             }
         }
 
-        stage('Get Git Tag') {
+          stage('Get Commit SHA') {
             steps {
                 script {
-                    def gitTag = sh(script: "git describe --tags --abbrev=0", returnStdout: true).trim()
-                    echo "Latest Git Tag: ${gitTag}"
-                    env.GIT_TAG = gitTag  // Store the tag in an environment variable
+                    def commitSha = sh(script: "git rev-parse HEAD", returnStdout: true).trim()
+                    echo "✅ Commit SHA: ${commitSha}"
                 }
             }
         }
