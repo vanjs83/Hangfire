@@ -94,7 +94,6 @@ pipeline {
     post {
         success {
             echo '✅ Build and Deployment Successful!'
-            echo ${GIT_TAG_NAME}
 
         }
         failure {
