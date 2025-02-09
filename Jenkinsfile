@@ -3,6 +3,7 @@ pipeline {
     environment {
         SERVICE_NAME = "HangfireService"   // Change to your service name
         DEPLOY_PATH = "C:\\Services\\Hangfire"  // Path where service runs
+        COMMIT_SHA = ""
     }
 
     stages {
@@ -17,8 +18,10 @@ pipeline {
           stage('Get Commit SHA') {
             steps {
                 script {
-                    def commitSha = sh(script: "git rev-parse HEAD", returnStdout: true).trim()
-                    echo "✅ Commit SHA: ${commitSha}"
+                    def commitSha = sh(script: "git rev-parse --short=7 HEAD", returnStdout: true).trim()
+                    env.COMMIT_SHA = commitSha  // Store in environment variable
+                    echo "✅ COMMIT_SHA: ${env.COMMIT_SHA}"
+
                 }
             }
         }
@@ -102,7 +105,7 @@ pipeline {
 
     post {
         success {
-            echo '✅ Build and Deployment Successful!'
+            echo '✅ Build and Deployment Successful from commit SHA ${env.COMMIT_SHA}'
 
         }
         failure {
