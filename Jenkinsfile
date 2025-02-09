@@ -43,7 +43,7 @@ pipeline {
                 script {
                     bat """
                     echo Stopping Windows Service...
-                  echo  sc stop ${SERVICE_NAME} || echo Service not running
+                    sc stop ${SERVICE_NAME} || echo Service not running
                     """
                 }
             }
