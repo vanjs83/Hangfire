@@ -102,12 +102,11 @@ pipeline {
                 }
             }
         }
-    }
+    
 
     post {
         success {
             echo '✅ Build and Deployment Successful from commit SHA'
-
         }
         failure {
             echo '❌ Build Failed. Check logs.'
