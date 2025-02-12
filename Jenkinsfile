@@ -18,10 +18,10 @@ pipeline {
           stage('Get Commit SHA') {
             steps {
                 script {
-                    def commitSha = sh(script: "git rev-parse --short=7 HEAD", returnStdout: true).trim()
+                    def commitSha = sh(script: "git rev-parse --short=8 HEAD", returnStdout: true).trim()
                     // Use withEnv to ensure variable persists
-                    echo withEnv(["COMMIT_SHA=${commitSha}"]) 
-                    echo "✅ Stored COMMIT_SHA: ${env.COMMIT_SHA}"
+                    //echo withEnv(["COMMIT_SHA=${commitSha}"]) 
+                   // echo "✅ Stored COMMIT_SHA: ${env.COMMIT_SHA}"
                 }
             }
         }
