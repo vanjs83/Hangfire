@@ -80,10 +80,16 @@ namespace Hangfire
 
        public class HangFireJobMethod
        {
-            [Queue("critical")]
+            private readonly ILogger<HangFireJobMethod> _logger;
+            public HangFireJobMethod(ILogger<HangFireJobMethod> logger)
+            {
+                _logger = logger;
+            }
+
             public  void JobMethod()
             {
-                BackgroundJob.Enqueue<Schedular>(job => job.WriteMessage());
+                _logger.LogInformation($"CreateJob Method {DateTime.Now}");
+                BackgroundJob.Schedule<Schedular>(job => job.WriteMessage(),DateTime.Now.AddMinutes(1));
             }
         }
 

@@ -1,14 +1,25 @@
-﻿using Microsoft.Extensions.Hosting;
+﻿using log4net.Config;
+using log4net;
+using Microsoft.Extensions.Hosting;
 using System;
+using System.IO;
+using System.Reflection;
 using Topshelf;
 
 namespace Hangfire
 {
     class Program
     {
+        private static readonly ILog _logger = LogManager.GetLogger(typeof(Program));
+
         static void Main(string[] args)
         {
-            HostFactory.Run(x =>
+            var logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
+            XmlConfigurator.Configure(logRepository, new FileInfo("app.config"));
+            var logger = LogManager.GetLogger(typeof(Program));
+
+
+          var exitCode = HostFactory.Run(x =>
             {
                 x.Service<HangfireService>(s =>
                 {
@@ -26,9 +37,14 @@ namespace Hangfire
 
                 x.StartAutomatically();
                 x.EnablePauseAndContinue();
-                x.SetStartTimeout(TimeSpan.FromMinutes(2)); // Adjust timeout as needed
+                x.SetStartTimeout(TimeSpan.FromMinutes(2)); 
+                x.OnException(ex =>
+                {
+                    logger.Error("Service encountered an error", ex);
+                });
             });
 
+            Environment.ExitCode = (int)Convert.ChangeType(exitCode, exitCode.GetTypeCode());
         }
     }
 }

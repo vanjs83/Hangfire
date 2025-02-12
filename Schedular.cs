@@ -21,11 +21,10 @@ namespace Hangfire
         }
 
 
+        [Queue("critical")]
         public void WriteMessage()
         {
-            _logger.LogInformation($"Recurring job executed: {DateTime.Now}");
-            _logger.LogInformation("Method: WriteMessage ");
-
+            _logger.Log(LogLevel.Information, $"Recurring job executed: {DateTime.Now}");
         }
     }
 }
