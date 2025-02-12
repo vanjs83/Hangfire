@@ -102,7 +102,7 @@ pipeline {
                 }
             }
         }
-    
+    }
 
     post {
         success {
@@ -112,4 +112,3 @@ pipeline {
             echo '❌ Build Failed. Check logs.'
         }
     }
-}
