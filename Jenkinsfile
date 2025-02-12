@@ -20,7 +20,7 @@ pipeline {
                 script {
                     def commitSha = sh(script: "git rev-parse --short=7 HEAD", returnStdout: true).trim()
                     // Use withEnv to ensure variable persists
-                    withEnv(["COMMIT_SHA=${commitSha}"]) {
+                   echo withEnv(["COMMIT_SHA=${commitSha}"]) {
                     echo "✅ Stored COMMIT_SHA: ${env.COMMIT_SHA}"
                 }
             }
@@ -105,7 +105,7 @@ pipeline {
 
     post {
         success {
-            echo '✅ Build and Deployment Successful from commit SHA ${env.COMMIT_SHA}'
+            echo '✅ Build and Deployment Successful from commit SHA'
 
         }
         failure {
